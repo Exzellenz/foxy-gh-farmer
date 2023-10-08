@@ -121,12 +121,14 @@ class FoxyChiaConfigManager:
             chia_foxy_config["pool"]["xch_target_address"] = foxy_config["farmer_reward_address"]
             config_was_updated = True
 
+ """      Below Gives Key error when  Key is not in Chia Config 
         # Ensure the wallet syncs with unknown peers
+        
         if chia_foxy_config["wallet"]["connect_to_unknown_peers"] is not True:
             chia_foxy_config["wallet"]["connect_to_unknown_peers"] = True
             config_was_updated = True
 
-        return config_was_updated
+        return config_was_updated """
 
     def ensure_foxy_gh_node(self, config: Dict, config_was_updated: bool = False):
         if config["farmer"]["full_node_peer"]["host"] != foxy_gigahorse_node_address or config["farmer"]["full_node_peer"]["port"] != foxy_gigahorse_node_port:
